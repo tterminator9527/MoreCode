@@ -17,7 +17,7 @@ import dao.impl.SystemFunctionDaoImpl;
 import entity.SystemFunction;
 
 /**
- * 系统功能业务逻辑实现类
+ * 系统锟斤拷锟斤拷业锟斤拷锟竭硷拷实锟斤拷锟斤拷
  * @author 	ls
  * @date	2012-06-08
  */
@@ -25,7 +25,7 @@ public class SystemFunctionBizImpl implements SystemFunctionBiz {
 	private SystemFunctionDao systemFunctionDaoImpl = new SystemFunctionDaoImpl();
 	
 	/**
-	 * 增加系统功能
+	 * 锟斤拷锟斤拷系统锟斤拷锟斤拷
 	 * @author 	ls
 	 * @date	2012-06-08
 	 */
@@ -34,7 +34,7 @@ public class SystemFunctionBizImpl implements SystemFunctionBiz {
 	}
 	
 	/**
-	 * 删除系统功能
+	 * 删锟斤拷系统锟斤拷锟斤拷
 	 * @author 	ls
 	 * @date	2012-06-08
 	 */
@@ -43,7 +43,7 @@ public class SystemFunctionBizImpl implements SystemFunctionBiz {
 	}
 	
 	/**
-	 * 修改系统功能
+	 * 锟睫革拷系统锟斤拷锟斤拷
 	 * @author 	ls
 	 * @date	2012-06-08
 	 */
@@ -52,7 +52,7 @@ public class SystemFunctionBizImpl implements SystemFunctionBiz {
 	}
 			
 	/**
-	 * 获取所有系统功能
+	 * 锟斤拷取锟斤拷锟斤拷系统锟斤拷锟斤拷
 	 * @author 	ls
 	 * @date	2012-06-08
 	 */
@@ -69,7 +69,7 @@ public class SystemFunctionBizImpl implements SystemFunctionBiz {
 				systemFunction.setSf_Url((String)map.get("SF_Url"));
 				systemFunction.setSf_sort((Integer)map.get("SF_Sort"));
 				systemFunction.setSf_Remarks((String)map.get("SF_Remarks"));	
-				systemFunction.setSf_PName(map.get("SF_PName")==null?"无":map.get("SF_PName").toString());
+				systemFunction.setSf_PName(map.get("SF_PName")==null?"锟斤拷":map.get("SF_PName").toString());
 				list.add(systemFunction);
 			}
 		}
@@ -77,7 +77,7 @@ public class SystemFunctionBizImpl implements SystemFunctionBiz {
 	}
 
 	/**
-	 * 根据SF_Id查询系统功能的详细信息
+	 * 锟斤拷锟斤拷SF_Id锟斤拷询系统锟斤拷锟杰碉拷锟斤拷细锟斤拷息
 	 * @author 	ls
 	 * @date	2012-06-08
 	 */
@@ -94,14 +94,14 @@ public class SystemFunctionBizImpl implements SystemFunctionBiz {
 				systemFunction.setSf_Url((String)map.get("SF_Url"));
 				systemFunction.setSf_sort((Integer)map.get("SF_Sort"));
 				systemFunction.setSf_Remarks((String)map.get("SF_Remarks"));
-				systemFunction.setSf_PName(map.get("SF_PName")==null?"无":map.get("SF_PName").toString());
+				systemFunction.setSf_PName(map.get("SF_PName")==null?"锟斤拷":map.get("SF_PName").toString());
 			}
 		}
 		return systemFunction;
 	}
 	
 	/**
-	 * 获取所有根系统功能编号及名称
+	 * 锟斤拷取锟斤拷锟叫革拷系统锟斤拷锟杰憋拷锟脚硷拷锟斤拷锟斤拷
 	 * @author 	ls
 	 * @date	2012-06-12
 	 */
@@ -121,7 +121,7 @@ public class SystemFunctionBizImpl implements SystemFunctionBiz {
 	}
 	
 	/**
-	 * 获取所有二级系统功能信息
+	 * 锟斤拷取锟斤拷锟叫讹拷锟斤拷系统锟斤拷锟斤拷锟斤拷息
 	 * @author 	ls
 	 * @date	2012-06-13
 	 */
@@ -136,7 +136,7 @@ public class SystemFunctionBizImpl implements SystemFunctionBiz {
 				systemFunction.setSf_Code((String)map.get("SF_Code"));
 				systemFunction.setSf_Name((String)map.get("SF_Name"));
 				systemFunction.setSf_Remarks((String)map.get("SF_Remarks"));
-				systemFunction.setSf_PName(map.get("SF_PName")==null?"无":map.get("SF_PName").toString());
+				systemFunction.setSf_PName(map.get("SF_PName")==null?"锟斤拷":map.get("SF_PName").toString());
 				list.add(systemFunction);
 			}
 		}
@@ -144,13 +144,13 @@ public class SystemFunctionBizImpl implements SystemFunctionBiz {
 	}
 	
 	/**
-	 * 根据Su_Id获取该用户所能执行的功能
+	 * 锟斤拷锟斤拷Su_Id锟斤拷取锟斤拷锟矫伙拷锟斤拷锟斤拷执锟叫的癸拷锟斤拷
 	 * @author 	ls
 	 * @date	2012-07-12
 	 */
 	public List getSystemFunctionBySu_Id(int su_Id){
 		List list = new ArrayList();
-		// 获取所有一级功能
+		// 锟斤拷取锟斤拷锟斤拷一锟斤拷锟斤拷锟斤拷
 		Result aSystemFunctionResult = systemFunctionDaoImpl.getOneSystemFunction();
 		Result userFunctionresult = systemFunctionDaoImpl.getSystemFunctionBySu_Id(su_Id);
 		if (null != aSystemFunctionResult && 0 < aSystemFunctionResult.getRowCount()){
